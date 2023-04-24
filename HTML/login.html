@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FruitsShop-Đăng nhập</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.2.1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../icons/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="../css/globalStyle.css" />
+    <link rel="stylesheet" href="../css/signIn.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div class="app">
+            <div class="container-fluid p-0 position-relative">
+                <div class="slide-modal">
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/slide-img1.jpg" class="d-block w-100" alt="slide1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/slide-img2.jpg" class="d-block w-100" alt="slide2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/slide-img3.jpg" class="d-block w-100" alt="slide3" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__content">
+                    <h1 class="logo__brand mb-5 text-center text-white">
+                        FruitsShop
+                    </h1>
+                    <h1 class="text-center title text">Đăng nhập</h1>
+                    <form action="" id="form-sign-in">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder=" " rules="noSpaceStart|required" name="username" id="username" />
+                            <label for="username" class="form-label">
+                                    Username
+                                </label>
+                            <span class="form-message"></span>
+                            <span class="form-check">
+                                    <i class="ti-check"></i>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder=" " rules="noSpaceStart|required|min:6" name="password" id="password" />
+                            <label for="password" class="form-label">
+                                    Password
+                                </label>
+                            <span class="form-message"></span>
+                            <span class="form-check">
+                                    <i class="ti-check"></i>
+                                </span>
+                        </div>
+
+                        <div class="silde__btns text-center">
+                            <button type="button" class="btn btn-light btn-submit">
+                                    <a
+                                        href="signIn.html"
+                                        class="slide__link text"
+                                    >
+                                        Sign in
+                                    </a>
+                                </button>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                    <a class="slide__link text"> Login </a>
+                                </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="navigate-to-home">
+                    <a href="homepage.html"> Move to home </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="../js/validate.js"></script>
+</body>
+
+</html>
