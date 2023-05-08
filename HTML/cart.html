@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FruitsShop-Giỏ hàng</title>
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.2.1-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../icons/themify-icons/themify-icons.css" />
+    <link rel="stylesheet" href="../css/globalStyle.css" />
+    <link rel="stylesheet" href="../css/cart.css" />
+</head>
+
+<body>
+    <div id="root">
+        <div class="app">
+            <header class="bg-light">
+                <div class="container">
+                    <nav class="navbar navbar-expand-md">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            <a class="navbar-brand d-block d-md-none d-lg-block" href="homepage.html">FruitsShop</a
+                                >
+
+                                <div
+                                    class="collapse navbar-collapse justify-content-between"
+                                    id="navbarSupportedContent"
+                                >
+                                    <ul class="navbar-nav me-auto">
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                aria-current="page"
+                                                href="homepage.html"
+                                                >Trang chủ</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a
+                                                class="nav-link"
+                                                href="#"
+                                                >Về chúng tôi</a
+                                            >
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a
+                                                class="nav-link"
+                                                href="#"
+                                            >
+                                                Cửa hàng
+                                            </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sơ đồ</a
+                                            >
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#"
+                                                >Tác giả</a
+                                            >
+                                        </li>
+                                        <li class="nav-item d-block d-md-none">
+                                            <a
+                                                class="nav-link actives"
+                                                href="cart.html"
+                                                >Giỏ hàng</a
+                                            >
+                                        </li>
+                                        <li class="nav-item d-block d-md-none">
+                                            <a
+                                                class="nav-link"
+                                                href="login.html"
+                                                >Đăng nhập</a
+                                            >
+                                        </li>
+                                    </ul>
+                                    <form
+                                        class="search d-flex"
+                                        role="search"
+                                        id="form-search"
+                                    >
+                                        <input
+                                            class="form-control me-2 d-md-none d-lg-block d-block"
+                                            type="search"
+                                            placeholder="Search"
+                                            aria-label="Search"
+                                        />
+                                        <button
+                                            class="btn btn-outline-success"
+                                            type="submit"
+                                        >
+                                            <i class="ti-search"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="header__cart">
+                                    <div class="header__cart-wrap">
+                                        <button class="btn btn-outline-success">
+                                            <i
+                                                class="header__cart-icon ti-shopping-cart"
+                                            ></i>
+                                            <span class="header__cart-notice"
+                                                >0</span
+                                            >
+                                        </button>
+                                        <div class="header__cart-list">
+                                            <img
+                                                src="../img/no_cart.png"
+                                                alt="Chưa có hàng"
+                                                class="header__cart-list--no-cart-img"
+                                            />
+                                            <span
+                                                class="header__cart-list--no-cart-msg"
+                                                >Chưa có sản phẩm</span
+                                            >
+                                            <h4 class="header__cart-heading">
+                                                Sản phẩm đã thêm
+                                            </h4>
+                                            <ul
+                                                class="header__cart-list-item"
+                                            ></ul>
+
+                                            <a
+                                                href="cart.html "
+                                                class="header__cart-item-btn btn btn--primary"
+                                            >
+                                                Xem giỏ hàng
+                                            </a>
+                        </div>
+                </div>
+        </div>
+        <button type="button" class="btn btn-outline-primary d-md-block d-none mx-2">
+                                    <a
+                                        href="login.html"
+                                        class="slide__link text"
+                                    >
+                                        Đăng nhập
+                                    </a>
+                                </button>
+    </div>
+    </nav>
+    </div>
+    </header>
+    <div class="container py-5">
+        <h1 class="text-center mb-3">Giỏ hàng</h1>
+        <div class="container" id="form-cart">
+            <div class="row">
+                <div class="col-md-7 col-12 mb-4">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="d-none d-lg-table-cell" scope="col">
+                                    #
+                                </th>
+                                <th scope="col">Tên sản phẩm</th>
+                                <th scope="col">Số lượng</th>
+                                <th class="d-none d-lg-table-cell" scope="col">
+                                    Giá
+                                </th>
+                                <th class="d-none d-lg-table-cell" scope="col">
+                                    Tạm tính
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-products"></tbody>
+                    </table>
+                    <div class="btns">
+                        <a href="#" class="return-home-btn">
+                            <button class="btn btn-outline-danger">
+                                            Tiếp tục xem sản phẩm
+                                        </button>
+                        </a>
+                        <button class="btn btn-warning edit-product-btn">
+                                        Cập nhật giỏ hàng
+                                    </button>
+                    </div>
+                </div>
+                <div class="col-md-5 col-12 mb-4">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col " colspan="2">
+                                    Cộng giỏ hàng
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="cart-product-item">
+                                <td class="col-title">Tạm tính</td>
+                                <td>
+                                    <span class="tmp-sum float-end">
+                                                    000
+                                                </span>
+                                </td>
+                            </tr>
+                            <tr class="cart-product-item">
+                                <td class="col-title">Giao hàng</td>
+                                <td>
+                                    <form action="" id="form-pay">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Nhập địa chỉ giao
+                                                            hàng" rules="required" name="address" id="address" />
+
+                                            <span class="form-message"></span>
+                                            <span class="form-check">
+                                                            <i
+                                                                class="ti-check"
+                                                            ></i>
+                                                        </span>
+                                        </div>
+                                    </form>
+
+                                    <span class="float-end cost-text">Phí giao hàng:
+                                                    <span class="cost">
+                                                        30000
+                                                    </span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="cart-product-total">
+                                <td class="col-title">Tổng</td>
+                                <td>
+                                    <span class="total float-end">
+                                                    000
+                                                </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="form-pay my-3">
+                        <div class="form-radio">
+                            <div>
+                                <label for="before">Trả trước</label
+                                            >
+                                            <input
+                                                type="radio"
+                                                name="form-pay"
+                                                id="before"
+                                                checked
+                                            />
+                                        </div>
+                                        <div class="mx-2">
+                                            <label for="after">Trả sau</label>
+                                <input type="radio" name="form-pay" id="after" />
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-danger pay-btn w-100">
+                                    Tiến hành thanh toán
+                                </button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 no-cart" id="no-cart">
+                    <div class="no-cart__img">
+                        <img src="../img/no_cart.png" alt="no-cart" />
+                    </div>
+                    <p class="no-cart__description">
+                        Chưa có sản phẩm
+                    </p>
+                    <a href="#" class="no-cart__link">
+                                    Quay lại cửa hàng
+                                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="grid bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3 mb-4 mb-md-0">
+                    <h2 class="text">Mua hàng</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a class="text" href="#">Trái cây trong nước</a
+                                        >
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="text" href="#"
+                                            >Trái cây nhập khẩu</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 mb-4 mb-md-0">
+                                <h2 class="text">Dịch vụ khách hàng</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a class="text" href="#"
+                                            >Khách hàng thân thiết</a
+                                        >
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="text" href="#"
+                                            >Chính sách vận chuyển</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-3 mb-4 mb-md-0">
+                                <h2 class="text">Giới thiệu</h2>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <a class="text" href="#"
+                                            >Về chúng tôi</a
+                                        >
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a class="text" href="#"
+                                            >Chính sách bảo mật</a
+                                        >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+                                <div class="contact">
+                                    <h2 class="text">Liên hệ với chúng tôi</h2>
+                                    <ul class="nav nav-pills my-4 my-sm-2">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">
+                                                <i class="ti-facebook"></i>
+                                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ti-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ti-email"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="ti-mobile"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <h2 class="text mb-3">
+                        Đăng ký để nhận ưu đãi
+                    </h2>
+                    <form action="" id="form-email-footer">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder=" " rules="email" name="email" id="email" />
+                            <label for="email" class="form-label">
+                                                Email
+                                            </label>
+                            <span class="form-message"> </span>
+                            <span class="form-check">
+                                                <i class="ti-check"></i>
+                                            </span>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-lg">
+                                            Submit
+                                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <span class="copy-right">
+                                
+                            </span>
+        </div>
+        </div>
+    </footer>
+    </div>
+    </div>
+
+    <script src="../jquerry/min.js"></script>
+    <script src="../jquerry/index.js"></script>
+
+    <script src="../bootstrap/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="../js/validate.js"></script>
+</body>
+
+</html>

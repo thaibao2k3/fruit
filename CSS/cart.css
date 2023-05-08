@@ -1,0 +1,147 @@
+table {
+    font-size: 1.6rem;
+}
+tbody {
+    margin-top: 12px;
+}
+.product-title {
+    font-size: 1.6rem;
+}
+.product__count {
+    display: flex;
+}
+.cart-product-item {
+    position: relative;
+}
+
+.delete-product-btn {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    opacity: 0.8;
+    display: none;
+    transition: all ease 0.3s;
+    padding: 6px;
+    font-size: 1.6rem;
+    z-index: 12;
+}
+
+.cart-product-item:hover .delete-product-btn {
+    display: block;
+    opacity: 1;
+    background-color: #fff;
+}
+
+.delete-product-btn:hover {
+    background-color: #dc3545 !important;
+    color: white;
+}
+
+/*  */
+.cart-product-item__img img {
+    width: 78px;
+    padding: 6px;
+}
+.product__count input {
+    border: 1px solid #eee;
+    font-size: 1.6rem;
+    width: 40px;
+    padding: 4px 8px;
+    text-align: center;
+    box-shadow: 0 0 3px #eee;
+}
+.product__count button {
+    font-size: 1.6rem;
+    padding: 4px 8px;
+    border: 1px solid #eee;
+    transition: all linear 0.2s;
+}
+.product__count button:hover {
+    background-color: #777;
+}
+#form-pay .form-group {
+    width: unset;
+    margin: 0;
+}
+#form-pay .form-control {
+    box-shadow: 0 0 2px #777;
+    border-radius: 0 !important;
+    color: #555;
+}
+#form-pay .form-message {
+    font-size: 1.2rem;
+}
+.form-radio {
+    display: flex;
+    align-items: center;
+}
+.form-radio div label,
+.form-radio div input {
+    font-size: 1.6rem;
+}
+.muti {
+    margin: 0 4px;
+}
+.cost,
+.total,
+.tmp-sum,
+.sum,
+.price {
+    font-weight: 600;
+}
+.cost-text {
+    font-size: 1.2rem;
+}
+.col-center {
+    margin-top: 20px;
+    display: flex;
+}
+.col-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+/* no-cart */
+.no-cart {
+    position: relative;
+    margin: 0 auto;
+}
+.no-cart__link,
+.no-cart__description {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.6rem;
+    font-weight: 700;
+    min-width: 250px;
+}
+.no-cart__link {
+    bottom: -12px;
+
+    color: #dc3545;
+}
+.no-cart__link:hover {
+    color: #dc3545;
+    text-decoration: underline;
+}
+
+.no-cart__description {
+    margin: 0;
+    top: 50%;
+
+    color: #bc9e2f;
+}
+.return-home-btn {
+    margin: 0 8px;
+}
+/* responsive */
+@media screen and (max-width: 380px) {
+    .return-home-btn {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+    .edit-product-btn {
+        margin: 0 8px 8px;
+    }
+}
