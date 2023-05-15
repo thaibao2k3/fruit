@@ -1,106 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/homepage.css">
+    
+    <link rel="stylesheet" href="../bootstrap/bootstrap-5.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="../CSS/globalStyle.css">
+    <link rel="stylesheet" href="../CSS/homepage.css">
+    <script src="../jquerry/min.js"></script>
+    <script src="../jquerry/index.js"></script>
+    <script src="../bootstrap/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+    <script src="../JS/validate.js"></script>
+    <script src="../JS/product.js"></script>
+    <script src="../JS/addProduct.js"></script>
 </head>
-
 <body>
-    <header>
-        <div class="menu">
-            <div class="m-left">
-                <h1>My Fruit</h1>
-                <nav>
-                    <ul>
-                        <li><a href="">Trang chủ</a></li>
-                        <li><a href="">Sản phẩm</a></li>
-                        <li><a href="">Giới thiệu</a></li>
-                        <li><a href="">Sơ đồ</a></li>
-                        <li><a href="">Tác giả</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <from>
-                <input type="text" placeholder="Search">
-                <button><img src="../img/iconsearch.jpg" alt="" width="25" height="25"></button>
-                <button><img src="../img/buyicon.png" alt="" width="25" height="25"></button>
-                <button type="button" class="btn btn-outline-primary d-md-block d-none mx-2">
-                                    <a
-                                        href="login.html"
-                                        class="slide__link text"
-                                    >
-                                        Đăng nhập
-                                    </a>
+    <div id="root">
+        <div class="app">
+            <header class="bg-light">
+                <div class="container">
+                    <nav class="navbar navbar-expand-md">
+                        <div class="container-fluid">
+                            <button
+                                    class="navbar-toggler d-block d-md-none"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent"
+                                    aria-controls="navbarSupportedContent"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
                                 </button>
-            </from>
-        </div>
-        <div class="banner">
-            <img src="../img/banner1.jpg" alt="" width="100%">
-        </div>
-    </header>
-    <section>
-        <article>
-            <div class="t-main">
-                <h1>Các mặt hàng</h1>
-                <h3>Shop chuyên cung cấp sản phẩm chất lượng</h3>
-            </div>
-            <div class="main">
-                <div class="b-main">
-                    <h2>Trái cây nhập khẩu</h2>
-                    <img src="../img/main1.jpg" alt="" width="600" height="400">
-                </div>
-                <div class="b-main">
-                    <h2>Trái cây trong nước</h2>
-                    <img src="../img/main2.jpg" alt="" width="600" height="400">
-                </div>
-            </div>
-        </article>
-    </section>
-    <aside>
-        <img src="../img/bannerAS1.jpg" alt="" width="300" height="300">
-        <img src="../img/bannerAS2.png" alt="" width="300" height="300">
-        <img src="../img/bannerAS3.jpg" alt="" width="300" height="300">
-        <img src="../img/bannerAS4.jpg" alt="" width="300" height="300">
-    </aside>
-    <footer>
-        <ul>
-            <li>
-                <a href="">
-                    <h2>MUA HÀNG</h2>
-                    <h3>Trái cây trong nước</h3>
-                    <h3>Trái cây nhập khẩu</h3>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <h2>DỊCH VỤ KHÁCH HÀNG</h2>
-                    <h3>Khách hàng thân thiết</h3>
-                    <h3>Chính sách vận chuyển</h3>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <h2>GIỚI THIỆU</h2>
-                    <h3>Về chúng tôi</h3>
-                    <h3>Chính sách bảo mật</h3>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
-                </a>
-            </li>
-        </ul>
-        <div class="t-center">
-            <span class="copy-right">
-                Ⓒ 2023 copy-right by thaibaotran0976@gmail.com
-            </span>
-        </div>
-    </footer>
-</body>
+                                
+                            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto">
+                                    <h1>MyFruits </h1>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="../HTML/homepage.html">Trang chủ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">Về chúng tôi</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="traicaytrongnuoc.html">Cửa hàng </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="sitemap.html">Sơ đồ</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="author.html">Tác giả</a>
+                                    </li>
+                                    
+                                </ul>
+                                <form class="search d-flex" role="search" id='form-search'>
+                                    <input
+                                        class="form-control me-2 d-md-none d-lg-block d-block"
+                                        type="search"
+                                        placeholder="Search"
+                                        aria-label="Search"
+                                    />
+                                    <button
+                                        class="btn btn-outline-success"
+                                        type="submit"
+                                    >
+                                        <i class="ti-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="header__cart">
+                                <div class="header__cart-wrap">
+                                    <button class="btn btn-outline-success">
+                                        <i
+                                            class="header__cart-icon ti-shopping-cart"
+                                        ></i>
+                                        <span class="header__cart-notice"
+                                            >0</span
+                                        >
+                                    </button>
+                                    <div class="header__cart-list">
+                                        <img
+                                            src="../img/no_cart.png"
+                                            alt="Chưa có hàng"
+                                            class="header__cart-list--no-cart-img"
+                                        />
+                                        <span
+                                            class="header__cart-list--no-cart-msg"
+                                            >Chưa có sản phẩm</span
+                                        >
+                                        <h4 class="header__cart-heading">
+                                            Sản phẩm đã thêm
+                                        </h4>
+                                        <ul
+                                            class="header__cart-list-item"
+                                        ></ul>
 
+                                        <a
+                                            href="cart.html "
+                                            class="header__cart-item-btn btn btn--primary"
+                                        >
+                                            Xem giỏ hàng
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary d-md-block d-none mx-2">
+                                <a href="login.html" class="slide__link text">Đăng nhập</a>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="slide-modal">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../img/banner1.jpg" class="d-block" alt="slide1"/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/banner2.jpg" class="d-block" alt="slide2"/>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../img/banner3.jpg" class="d-block" alt="slide3"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_content">
+                    <div class="logo">
+                        <h1 class="logo_name">welcome to my shop</h1>
+                        <p class="logo_description">
+                            Only the finest fruits
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <section>
+                <article>
+                    <div class="t-main">
+                        <h1><b>Các mặt hàng</b></h1>
+                        <h3>Shop chuyên cung cấp sản phẩm chất lượng</h3>
+                    </div>
+                    <div class="main">
+                        <div class="b-main">
+                            <h2>Trái cây nhập khẩu</h2>
+                            <a href="../HTML/traicaynhapkhau.html">
+                                <img src="../img/main1.jpg" alt="" width="600" height="400">
+                            </a>
+                        </div>
+                        <div class="b-main">
+                            <h2>Trái cây trong nước</h2>
+                            <a href="../HTML/traicaytrongnuoc.html">
+                                <img src="../img/main2.jpg" alt="" width="600" height="400">
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <aside>
+                <img src="../img/bannerAS1.jpg" alt="" width="300" height="300">
+                <img src="../img/bannerAS2.png" alt="" width="300" height="300">
+                <img src="../img/bannerAS3.jpg" alt="" width="300" height="300">
+                <img src="../img/bannerAS4.jpg" alt="" width="300" height="300">
+            </aside>
+            <footer class="grid bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6 col-md-3 mb-4 mb-md-0">
+                            <h2 class="text">Mua hàng</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a class="text" href="traicaytrongnuoc.html">Trái cây trong nước</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text" href="traicaynhapkhau.html">Trái cây nhập khẩu</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4 mb-md-0">
+                            <h2 class="text">Dịch vụ khách hàng</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a class="text" href="#">Khách hàng thân thiết</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text" href="#">Chính sách vận chuyển</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3 mb-4 mb-md-0">
+                            <h2 class="text">Giới thiệu</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <a class="text" href="about.html">Về chúng tôi</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text" href="#">Chính sách bảo mật</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-3 mb-4 mb-md-0">
+                            <div class="contact">
+                                <h2 class="text">Liên hệ với chúng tôi</h2>
+                                <ul class="nav nav-pills my-4 my-sm-2">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class="ti-email"></i>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">
+                                            <i class="ti-mobile"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <h2 class="text mb-3">
+                                    Đăng ký để nhận ưu đãi
+                                </h2>
+                                <form action="" id="form-email-footer">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder=" " rules="email" name="email" id="email"/>
+                                        <label for="email" class="form-label">Email</label>
+                                        <span class="form-message"> </span>
+                                        <span class="form-check">
+                                            <i class="ti-check"></i>
+                                        </span>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 btn-lg">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <span class="copy-right">
+                            Ⓒcopy-right-by-thaibaotran0976@gmail.com
+                        </span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
 </html>

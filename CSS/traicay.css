@@ -1,0 +1,110 @@
+.mb-15 {
+    margin-bottom: 15px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+.logo {
+    padding: 20px 0 0;
+}
+.logo .logo__brand {
+    user-select: none;
+    pointer-events: none;
+}
+
+/* search */
+.search {
+    position: relative;
+    margin: 40px auto;
+    max-width: 760px;
+}
+.btn-search {
+    font-size: 1.8rem;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input {
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 0 5px #ccc;
+    padding: 12px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+/* product */
+.title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0;
+}
+.sort {
+    box-shadow: 0 0 5px #ccc;
+    font-size: 1.6rem;
+}
+
+/* .downlist-icon{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+} */
+.sort select {
+    /* appearance: none; */
+    /* --webkit-appearance: none; */
+    padding: 12px;
+}
+
+/* card */
+.card-img {
+    overflow: hidden;
+}
+.card-img img {
+    transition: all ease-out 0.3s;
+}
+.card:hover .card-img img {
+    filter: brightness(0.8);
+    transform: scale(1.2);
+}
+.card-body {
+    text-align: start;
+}
+.card-title {
+    color: #334862;
+    font-size: 1.6rem;
+    height: 24px;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.card-price {
+    color: #000;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+.card-price::after {
+    content: "đ";
+    text-decoration: underline;
+    margin-left: 1px;
+}
+
+/* responsive */
+@media screen and (max-width: 576px) {
+    .card-title {
+        height: 48px;
+        -webkit-line-clamp: 2;
+    }
+    .title {
+        font-size: 1.6rem;
+    }
+    .sort {
+        font-size: 1.4rem;
+    }
+    .sort select {
+        padding: 6px;
+    }
+}

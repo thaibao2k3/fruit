@@ -1,0 +1,139 @@
+/* product */
+.product__detail {
+    padding-bottom: 24px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+}
+.product__info {
+    padding: 0 12px;
+}
+.product__name {
+    font-size: 4.6rem;
+    font-weight: 700;
+    color: #555;
+    position: relative;
+    margin-bottom: 12px;
+    padding-bottom: 16px;
+}
+.product__name::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: "";
+    width: 15%;
+    height: 3px;
+    background-color: #555;
+    opacity: 0.7;
+}
+.product__price {
+    position: relative;
+    font-size: 4.2rem;
+    color: #faad3d;
+    font-weight: 700;
+    padding-right: 24px;
+}
+.product__price::after {
+    position: absolute;
+    right: 0;
+    top: -8px;
+    content: "đ";
+    text-decoration: underline;
+    font-size: 3.2rem;
+    color: #faad3d;
+    font-weight: 700;
+}
+.product__description li {
+    list-style-type: disc;
+}
+.product__description {
+    margin: 12px 0;
+    font-size: 1.6rem;
+    color: #777;
+}
+
+.product__btns {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    padding-top: 24px;
+}
+.product__btns::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 10%;
+    height: 3px;
+    background-color: #555;
+    opacity: 0.7;
+}
+.product__count {
+    display: flex;
+}
+.product__count input {
+    border: 1px solid #eee;
+    font-size: 1.6rem;
+    width: 40px;
+    padding: 4px 8px;
+    text-align: center;
+    box-shadow: 0 0 3px #eee;
+}
+.product__count button {
+    font-size: 1.6rem;
+    padding: 4px 8px;
+    border: 1px solid #eee;
+    transition: all linear 0.2s;
+}
+.product__count button:hover {
+    background-color: #777;
+}
+.product__btn {
+    text-transform: uppercase;
+    padding: 4px 8px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+}
+/* recomend */
+.product-recomend {
+    position: relative;
+}
+.product-recomend:hover .product-recomend__btn {
+    display: block;
+}
+.product-recomend__btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: unset;
+    font-size: 1.6rem;
+    display: none;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.product-recomend__btn--right {
+    left: unset;
+    right: 0;
+}
+.product-recomend__btn:hover {
+    color: #faad3d;
+}
+/* toast */
+.product-toast {
+    position: fixed;
+    top: 50px;
+    right: 0;
+}
+.product-toast__title {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.product-toast .btn-close {
+    font-size: 1.6rem;
+}
+.product-toast__link {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
